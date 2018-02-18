@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e7N-aR-51f">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Movies View Controller-->
+        <scene sceneID="WSt-yO-bOT">
+            <objects>
+                <viewController id="Izf-mW-fFm" customClass="MoviesViewController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6hH-uG-oDw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-6m-fpS">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LFZ-q9-vsp">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LFZ-q9-vsp" id="9ZY-JT-yAb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="qZp-ha-Rbs" firstAttribute="trailing" secondItem="ca3-6m-fpS" secondAttribute="trailing" id="F5y-Bs-fy8"/>
+                            <constraint firstItem="ca3-6m-fpS" firstAttribute="top" secondItem="qZp-ha-Rbs" secondAttribute="top" id="FSh-MY-pzX"/>
+                            <constraint firstItem="qZp-ha-Rbs" firstAttribute="bottom" secondItem="ca3-6m-fpS" secondAttribute="bottom" id="hBt-d2-ojo"/>
+                            <constraint firstItem="ca3-6m-fpS" firstAttribute="leading" secondItem="qZp-ha-Rbs" secondAttribute="leading" id="wEe-aK-NQn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qZp-ha-Rbs"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="2QM-5H-4CR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FFl-t4-M8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1503" y="524"/>
+        </scene>
+        <!--iTunes Music View Controller-->
+        <scene sceneID="Qyn-Yg-QhX">
+            <objects>
+                <viewController id="FGK-h5-zka" customClass="iTunesMusicViewController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X84-HJ-sjw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZT1-wk-QXD">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kHt-65-pSa">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xA4-0y-dPL">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="de7-lr-VMX" firstAttribute="trailing" secondItem="ZT1-wk-QXD" secondAttribute="trailing" id="Dkd-ms-NhW"/>
+                            <constraint firstItem="ZT1-wk-QXD" firstAttribute="top" secondItem="de7-lr-VMX" secondAttribute="top" id="Spr-S8-zQ3"/>
+                            <constraint firstItem="de7-lr-VMX" firstAttribute="bottom" secondItem="ZT1-wk-QXD" secondAttribute="bottom" id="Yb4-WM-S9T"/>
+                            <constraint firstItem="ZT1-wk-QXD" firstAttribute="leading" secondItem="de7-lr-VMX" secondAttribute="leading" id="isE-Od-iio"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="de7-lr-VMX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="history" id="zO0-H8-UPM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0v7-V8-L5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="640"/>
+        </scene>
+        <!--Books View Controller-->
+        <scene sceneID="ZIe-D2-kcv">
+            <objects>
+                <viewController id="rI6-7f-JFF" customClass="BooksViewController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="esv-U7-4S3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.80286320369999997" green="1" blue="0.75445659769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="4ht-Z7-Ve7"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="THa-LX-0qw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYf-dn-Sio" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="148" y="524"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="P2Y-Xv-N0h">
+            <objects>
+                <tabBarController id="e7N-aR-51f" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="54x-el-typ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Izf-mW-fFm" kind="relationship" relationship="viewControllers" id="0om-fK-E32"/>
+                        <segue destination="FGK-h5-zka" kind="relationship" relationship="viewControllers" id="LoI-3y-ath"/>
+                        <segue destination="rI6-7f-JFF" kind="relationship" relationship="viewControllers" id="XQR-BW-nTO"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gk6-bl-uMD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="-245"/>
+        </scene>
+    </scenes>
+</document>
