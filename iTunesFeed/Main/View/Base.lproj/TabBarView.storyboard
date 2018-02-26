@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Movies View Controller-->
+        <!--Movies-->
         <scene sceneID="WSt-yO-bOT">
             <objects>
                 <viewController id="Izf-mW-fFm" customClass="MoviesViewController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,21 +18,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-6m-fpS">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ca3-6m-fpS">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LFZ-q9-vsp">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="defaultCell" id="LFZ-q9-vsp">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LFZ-q9-vsp" id="9ZY-JT-yAb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Izf-mW-fFm" id="RVW-f6-LN3"/>
+                                    <outlet property="delegate" destination="Izf-mW-fFm" id="iQT-53-eH3"/>
+                                </connections>
                             </tableView>
                         </subviews>
+                        <color key="backgroundColor" red="0.90712953780000005" green="1" blue="0.21283311499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qZp-ha-Rbs" firstAttribute="trailing" secondItem="ca3-6m-fpS" secondAttribute="trailing" id="F5y-Bs-fy8"/>
                             <constraint firstItem="ca3-6m-fpS" firstAttribute="top" secondItem="qZp-ha-Rbs" secondAttribute="top" id="FSh-MY-pzX"/>
@@ -41,13 +46,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qZp-ha-Rbs"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="2QM-5H-4CR"/>
+                    <tabBarItem key="tabBarItem" title="Movies" id="2QM-5H-4CR"/>
+                    <connections>
+                        <outlet property="tableView" destination="ca3-6m-fpS" id="6iI-wo-jXH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FFl-t4-M8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1503" y="524"/>
         </scene>
-        <!--iTunes Music View Controller-->
+        <!--iTunes Music-->
         <scene sceneID="Qyn-Yg-QhX">
             <objects>
                 <viewController id="FGK-h5-zka" customClass="iTunesMusicViewController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -84,13 +92,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="de7-lr-VMX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="history" id="zO0-H8-UPM"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="iTunes Music" id="zO0-H8-UPM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0v7-V8-L5R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-668" y="640"/>
         </scene>
-        <!--Books View Controller-->
+        <!--Books-->
         <scene sceneID="ZIe-D2-kcv">
             <objects>
                 <viewController id="rI6-7f-JFF" customClass="BooksViewController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,16 +108,16 @@
                         <color key="backgroundColor" red="0.80286320369999997" green="1" blue="0.75445659769999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="4ht-Z7-Ve7"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="THa-LX-0qw"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="Books" id="THa-LX-0qw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYf-dn-Sio" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="148" y="524"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="P2Y-Xv-N0h">
             <objects>
-                <tabBarController id="e7N-aR-51f" sceneMemberID="viewController">
+                <tabBarController id="e7N-aR-51f" customClass="MainTabBarController" customModule="iTunesFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="54x-el-typ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

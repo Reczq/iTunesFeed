@@ -1,15 +1,24 @@
 import UIKit
 
-final class TabBarController: UIViewController {
+enum MainTabBarItemTags: Int {
+    case Movies = 1, iTunesMusic, Books
+}
+
+class MainTabBarController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
 
-        let url = URL(string:  "https://rss.itunes.apple.com/api/v1/us/movies/top-movies/all/10/explicit.json")!
-        let resource = Resource<MovieModel>(url: url)
-
-        WebService().load(resources: resource) {
-            print($0 ?? 0)
+    override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
+        switch item.tag {
+        case 0:
+            print("movies")
+        case 1:
+            print("music")
+        case 2:
+            print("books")
+        default: break
         }
     }
 }
